@@ -8,12 +8,12 @@ public class Lab1 {
 
         double s = 0;
         for (int i = a; i <= n; i++) {
+            if (i + C == 0) {
+                System.out.println("Error! Division by zero.");
+                break;
+            }
             for (int j = b; j <= m; j++) {
-                if (i + C == 0) {
-                    System.out.println("Error! Division by zero.");
-                } else {
-                    s += (double) (i + j) / (i + C);
-                }
+                s += (double) (i + j) / (i + C);
             }
         }
         System.out.println(s);
