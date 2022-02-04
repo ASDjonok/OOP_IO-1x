@@ -1,3 +1,5 @@
+import myPackage.LogicOperations;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -17,5 +19,7 @@ public class Main {
         char c1 = '1';
         System.out.println("c1 = " + c1);
         System.out.println("(int)c1 = " + (int) c1);
+
+        LogicOperations logicOperations;
     }
 }
