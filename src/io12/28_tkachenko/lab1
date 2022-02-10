@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class lab1 {
+    public static void main(String[] args) {
+        while (true) {
+            Scanner in = new Scanner(System.in);
+
+            float result = 0.0F;
+            final int C = 1, n, m;
+            byte i, j;
+
+            try {
+                System.out.print("add i index: ");
+                i = in.nextByte();
+                System.out.print("add j index: ");
+                j = in.nextByte();
+            } catch (Exception WrongNumber) {
+                System.out.print("you typed a wrong number, try integer number between -128 and 127, and not -1 for i");
+                break;
+            }
+            System.out.print("add n limit: ");
+            n = in.nextInt();
+            System.out.print("add m limit: ");
+            m = in.nextInt();
+
+            in.close();
+
+            for (int a = i; a <= n; a++) {
+                for (int b = j; b <= m; b++) {
+                    if (a <= C && n > C) {
+                        System.out.print("Dividing by zero is impossible");
+                        return;
+                    } else{
+                        result += (float) (a + b) / (a + C);
+                    }
+                }
+            }
+
+            System.out.printf("Your result: %f \n", result);
+            break;
+        }
+    }
+}
