@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.lang.Math;
 
-public class Main {
+public class Lab2 {
     public static void main(String[] args) {
         /*
             C5 = 0, C7 = 5, C11 = 9
