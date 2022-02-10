@@ -20,9 +20,10 @@ public class Lab1 {
 
         // Змінні для формули
         byte i, j;
-        int a, n, b, m;
+        final int a, n, b, m;
 
         // Користувач вводить значення змінних
+//        todo check entered value
         System.out.println("Enter a: ");
         a = value.nextInt();
         System.out.println("Enter n: ");
@@ -35,13 +36,17 @@ public class Lab1 {
 
         if (-C3 <= n && -C3 >= a) {
             System.out.println("Error");
+//            todo change to return, else (already exists), catch (but last is worse as for me)
             throw new ArithmeticException("Division by zero");
         }
         //Записуємо формулу
+//        todo move to previous line (Ctrl+Alt+l - hotkey for auto-format code)
         else {
+//            todo result should be double or float
             byte result = 0;
             for (i = (byte) a; i <= n; i++) {
                 for (j = (byte) b; j <= m; j++){
+//                    todo switch from integer division to float (e.g. by adding "(double)" or "(float)" before "(i * j)")
                     result += (i * j) / (i + C3);
                 }
             }
