@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class Lab1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
 //        System.out.println(scanner.hasNextInt());
         ensureInt(scanner);
         System.out.println(scanner.nextInt());
 //        scanner.nextLine();
         ensureInt(scanner);
-        System.out.println(scanner.nextInt());
+        System.out.println(scanner.nextInt());*/
 //        int a = scanner.nextInt();
         /*boolean isNumberEntered = false;
         while (!isNumberEntered) {
@@ -23,25 +23,47 @@ public class Lab1 {
                 System.out.println("Please enter number (not other symbol(s)).");
             }
         }*/
-        System.out.println("!!!");
+//        System.out.println("!!!");
 
-        /*final int a = 0;
+        final int a = 0;
         final int b = 1;
         final int n = 2;
         final int m = 2;
         final int C = 0;
 
+//        System.out.println((double)1/2);
+
         double s = 0;
-        for (int i = a; i <= n; i++) {
+        boolean wasError = false;
+        if (a <= -C && -C <= n) {
+            System.out.println("Error! Division by zero.");
+        } else {
+            for (int i = a; i <= n; i++) {
+                for (int j = b; j <= m; j++) {
+                    s += (double) (i + j) / (i + C);
+                }
+            }
+            System.out.println(s);
+        }
+       /* *//*myLabel:*//* for (int i = a; i <= n; i++) {
             if (i + C == 0) {
                 System.out.println("Error! Division by zero.");
+                wasError = true;
                 break;
             }
             for (int j = b; j <= m; j++) {
+                *//*if (i + C == 0) {
+                    System.out.println("Error! Division by zero.");
+//                    return;
+//                    System.exit(0);
+                    break myLabel;
+                }*//*
                 s += (double) (i + j) / (i + C);
             }
         }
-        System.out.println(s);*/
+        if (!wasError) {
+            System.out.println(s);
+        }*/
         /*System.out.println(1/2);
         int a = 1;
         int b = 2;
