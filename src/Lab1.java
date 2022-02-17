@@ -1,6 +1,31 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Lab1 {
     public static void main(String[] args) {
-        final int a = 0;
+        Scanner scanner = new Scanner(System.in);
+//        System.out.println(scanner.hasNextInt());
+        ensureInt(scanner);
+        System.out.println(scanner.nextInt());
+//        scanner.nextLine();
+        ensureInt(scanner);
+        System.out.println(scanner.nextInt());
+//        int a = scanner.nextInt();
+        /*boolean isNumberEntered = false;
+        while (!isNumberEntered) {
+            try {
+                System.out.println(scanner.nextInt());
+                isNumberEntered = true;
+//            System.out.println("???");
+            } catch (InputMismatchException e) {
+//                System.out.println("***" + scanner.nextLine());
+                System.out.println("***" + scanner.next());
+                System.out.println("Please enter number (not other symbol(s)).");
+            }
+        }*/
+        System.out.println("!!!");
+
+        /*final int a = 0;
         final int b = 1;
         final int n = 2;
         final int m = 2;
@@ -16,12 +41,19 @@ public class Lab1 {
                 s += (double) (i + j) / (i + C);
             }
         }
-        System.out.println(s);
+        System.out.println(s);*/
         /*System.out.println(1/2);
         int a = 1;
         int b = 2;
         System.out.println((double)a/b);
         double s = a/b;
         System.out.println(s);*/
+    }
+
+    private static void ensureInt(Scanner scanner) {
+        while (!scanner.hasNextInt()) {
+            System.out.println("was in input buffer: \"" + scanner.next() + "\"");
+            System.out.println("Please enter number (not other symbol(s)).");
+        }
     }
 }
