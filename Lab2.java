@@ -41,6 +41,9 @@ public class Lab2 {
         int numberOfColumnsInB = B[0].length;
         for(i = 0; i < B.length; i++){
             for(j = 0; j < B[0].length; j++){
+                if (!Character.isDigit(B[i][j])){
+                    throw new ArithmeticException("Matrix Should consist of numbers!");
+                }
                 System.out.print(B[i][j] + " ");
             }
             if (B[i].length != numberOfColumnsInB){
