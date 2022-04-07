@@ -3,6 +3,13 @@ import java.util.Scanner;
 
 public class Lab1 {
     public static void main(String[] args) {
+        char a = 11;
+        char c = 'a';
+        char b = (char) (a + c);
+        int b2 = (a + c);
+        System.out.println((int) a);
+        System.out.println((int) b);
+        System.out.println((int) c);
         /*Scanner scanner = new Scanner(System.in);
 //        System.out.println(scanner.hasNextInt());
         ensureInt(scanner);
@@ -25,7 +32,7 @@ public class Lab1 {
         }*/
 //        System.out.println("!!!");
 
-        final int a = 0;
+        /*final int a = 0;
         final int b = 1;
         final int n = 2;
         final int m = 2;
@@ -35,7 +42,7 @@ public class Lab1 {
 
         double s = 0;
         boolean wasError = false;
-        if (a <= -C && -C <= n) {
+        if ((a <= (-C)) && ((-C) <= n)) {
             System.out.println("Error! Division by zero.");
         } else {
             for (int i = a; i <= n; i++) {
@@ -44,7 +51,7 @@ public class Lab1 {
                 }
             }
             System.out.println(s);
-        }
+        }*/
        /* *//*myLabel:*//* for (int i = a; i <= n; i++) {
             if (i + C == 0) {
                 System.out.println("Error! Division by zero.");
