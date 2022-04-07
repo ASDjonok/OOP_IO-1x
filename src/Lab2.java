@@ -13,7 +13,7 @@ public class Lab2 {
         System.out.println(a.length);
 
         int[] a2 = {1, 2, 4};
-
+//test
         int[][] matrix2 = {
                 {1, 2, 3},
                 {4, 5, 6}
