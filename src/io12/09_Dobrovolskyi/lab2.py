@@ -1,11 +1,11 @@
 '''
-/****************************************/
-/*	Program to get a candy		        */
-/*	Programmer : Fedir		            */
-/*	Date : 11th April, 2022	            */
-/*	Email : dobrovolskiy.fedir@gmail.com*/
-/* 	Webpage : none		                */
-/****************************************/
+****************************************
+Program to get a candy		        
+Programmer : Fedir		            
+Date : 11th April, 2022	            
+Email : dobrovolskiy.fedir@gmail.com
+Webpage : none		                
+****************************************
 '''
 # C5 = 1210 % 5  # 0 - дія з матрицею: axB, a - const
 # C7 = 1210 % 7  # 6 - тип елементів матриці: float
