@@ -1,7 +1,19 @@
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
+/*
+ * C5 = 0; operation: C=a×B, a - const
+ * C7 = 1; type of matrix elements: byte
+ * C11 = 6; action to perform:
+ * Обчислити суму найбільших елементів в стовпцях матриці з парними номерами
+ * та найменших елементів в стовпцях матриці з непарними номерами
+ */
 
 /**
  * Lab2 class contains methods required in lab 2 of OOP course
+ * int number obtained from keyboard
+ * byte matrixWidth obtained from keyboard
+ * byte matrixLength obtained from keyboard
  * @author Vadim Voykin
  * @version 0.2
  */
@@ -9,12 +21,30 @@ import java.util.Random;
 public class Lab2 {
 
     /**
-     * Main method generate matrix and call other methods to perform operations on matrix
+     * Generate matrix and call other methods to perform operations on matrix
+     * @param argv Arguments vector is not used
      */
 
     public static void main(String[] argv) {
-        byte[][] matrix = new byte[6][10];
-        byte number = 2;
+
+        byte number;
+        byte matrixWidth;
+        byte matrixLength;
+        Scanner keyboard = new Scanner(System.in);
+
+        try{
+            System.out.print("number to multiply: ");
+            number = keyboard.nextByte();
+            System.out.print("MatrixLength: ");
+            matrixLength = keyboard.nextByte();
+            System.out.print("MatrixWidth: ");
+            matrixWidth = keyboard.nextByte();
+        }catch(InputMismatchException e){
+            System.out.println("Entered value does NOT corresponds to byte type");
+            return;
+        }
+
+        byte[][] matrix = new byte[matrixWidth][matrixLength];
         Random randomizer = new Random();
 
         for(int i = 0; i < matrix.length; i++) {
@@ -29,20 +59,21 @@ public class Lab2 {
         multiplyMatrix(matrix, number);
         printMatrix(matrix);
         countMatrix(matrix);
-
     }
 
     /***
-     * Prints matrix with 3 spaces for each element
+     * Prints matrix with 3 mark places for each element
      * @param matrix matrix to be printed
      */
     private static void printMatrix(byte[][] matrix) {
+        System.out.println();
         for(int i = 0; i < matrix.length; i++) {
             for(int j = 0; j < matrix[i].length; j++){
-                System.out.print(String.format("%1$-3d ", matrix[i][j]));
+                System.out.print(String.format("%1$-3d", matrix[i][j]));
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     /***
