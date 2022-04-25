@@ -13,6 +13,7 @@ let
   pythonEnv = pkgs.python310.withPackages (p: with p; [
     pylint black
     ipython notebook
+    numpy
   ]);
 
 in pkgs.mkShell {
