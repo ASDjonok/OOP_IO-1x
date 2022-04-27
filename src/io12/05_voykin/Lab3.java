@@ -12,6 +12,7 @@ import java.util.Scanner;
  * char[] delimiters is predefined
  * String dedicatedWord is predefined
  * String strToProcess is obtained from keyboard
+ *
  * @author Vadim Voykin
  * @version 0.2
  */
@@ -19,6 +20,7 @@ public class Lab3 {
 
     /**
      * Obtain String from console and process according to described operation
+     *
      * @param argv unused
      */
     public static void main(String[] argv) {
@@ -28,7 +30,7 @@ public class Lab3 {
         try {
             strToProcess = keyboard.nextLine();
             System.out.format("Unprocessed phrase =>%1$s<=\n", strToProcess);
-        }catch(NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Empty input");
             return;
         }
@@ -42,20 +44,20 @@ public class Lab3 {
         StringBuffer strBuffer = new StringBuffer(strToProcess);
 
         int strBufferLength = strBuffer.length();
-        while(index < strBufferLength) {
-            if(isDelimiter(delimiters, strBuffer.charAt(index))) {
-                if(leftCorner != -1 && index - leftCorner == dedicatedLength) {
+        while (index < strBufferLength) {
+            if (isDelimiter(delimiters, strBuffer.charAt(index))) {
+                if (leftCorner != -1 && index - leftCorner == dedicatedLength) {
                     strBuffer.replace(leftCorner, index, dedicatedWord);
                 }
                 leftCorner = -1;
             } else {
-                if(leftCorner == -1) {
+                if (leftCorner == -1) {
                     leftCorner = index;
                 }
             }
             index++;
         }
-        if(index - leftCorner == dedicatedLength) {
+        if (index - leftCorner == dedicatedLength) {
             strBuffer.replace(leftCorner, index, dedicatedWord);
         }
         String resultString = strBuffer.toString();
@@ -63,14 +65,13 @@ public class Lab3 {
     }
 
     /**
-     *
-     * @param delimiters array of elements, considered as delimiters
+     * @param delimiters    array of elements, considered as delimiters
      * @param charToProcess char to check, if it is delimiter or not
      * @return true if charToProcess is considered as delimiter else false
      */
     private static boolean isDelimiter(char[] delimiters, char charToProcess) {
-        for(int i = 0; i < delimiters.length; i++) {
-            if(delimiters[i] == charToProcess) {
+        for (int i = 0; i < delimiters.length; i++) {
+            if (delimiters[i] == charToProcess) {
                 return true;
             }
         }
