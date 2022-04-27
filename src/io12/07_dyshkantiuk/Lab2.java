@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Lab2 {
@@ -11,12 +13,23 @@ public class Lab2 {
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введіть кількість рядків матриці: ");
-        int a = in.nextInt();
-        System.out.print("Введіть кількість стовпців матриці: ");
-        int b = in.nextInt();
-        System.out.print("Діапазон генерації матриці від 0 до ");
-        int c = in.nextInt();
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        try {
+            System.out.print("Введіть кількість рядків матриці: ");
+            a = in.nextInt();
+            System.out.print("Введіть кількість стовпців матриці: ");
+            b = in.nextInt();
+            System.out.print("Діапазон генерації матриці від 0 до ");
+            c = in.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.print("Введіть всі дані правильно");
+            return;
+        } catch (NoSuchElementException e) {
+            System.out.print("Введіть дані");
+            return;
+        }
         if (c >= Character.MAX_VALUE){
             System.out.print("char не може бути більше " + (Character.MAX_VALUE+0));
             return;
