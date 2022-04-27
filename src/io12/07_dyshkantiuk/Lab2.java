@@ -18,7 +18,7 @@ public class Lab2 {
         System.out.print("Діапазон генерації матриці від 0 до ");
         int c = in.nextInt();
         if (c >= Character.MAX_VALUE){
-            System.out.print("char не може бути більше " + Character.MAX_VALUE);
+            System.out.print("char не може бути більше " + (Character.MAX_VALUE+0));
             return;
         }
         char[][] A = new char[a][b];
