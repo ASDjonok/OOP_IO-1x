@@ -1,14 +1,12 @@
 /*
-    * Number of ZKS of student Vadim Voykin: 1205
-    * C2 operator "-": 1205 % 2 = 1
-    * C3 constant 2: 1205 % 3 = 2
-    * C5 operator *: 1205 % 5 = 0
-    * C7 type short: 1205 % 7 = 1
-*/
+ * Number of ZKS of student Vadim Voykin: 1205
+ * C2 operator "-": 1205 % 2 = 1
+ * C3 constant 2: 1205 % 3 = 2
+ * C5 operator *: 1205 % 5 = 0
+ * C7 type short: 1205 % 7 = 1
+ */
 
-import java.io.IOException;
-
-public class lab1 {
+public class Lab1 {
     public static void main(String[] argv) {
 
         if (argv.length < 4) {
@@ -33,14 +31,11 @@ public class lab1 {
             System.out.println("Zero division");
             return;
         }
-         for (short i = a; i <= n; i++) {
+        for (short i = a; i <= n; i++) {
             for (short j = b; j <= m; j++) {
-                finSum += (i * j) / (i - C);
+                finSum += (float) (i * j) / (i - C);
             }
         }
-         System.out.println(finSum);
-         return;
+        System.out.println(finSum);
     }
 }
-
-
