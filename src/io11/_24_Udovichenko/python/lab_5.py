@@ -20,6 +20,9 @@ class Char:
 class Word:
     val: list[Char]
 
+    def __hash__(self) -> int:
+        return hash(str(self))
+
     def __str__(self) -> str:
         return "".join(map(str, self.val))
 
@@ -83,7 +86,8 @@ class Task:
 
     def solve(self) -> None:
         for s in sorted(
-            filter(lambda x: len(set(str(x).lower())) == len(str(x)), self.words),
+            # filter(lambda x: len(set(str(x).lower())) == len(str(x)), self.words),
+            set(self.words),
             key=lambda c: str(c.val[0]).lower(),
             reverse=False,
         ):
