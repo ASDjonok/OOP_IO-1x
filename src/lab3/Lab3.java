@@ -4,11 +4,11 @@ import javax.swing.plaf.synth.SynthRadioButtonMenuItemUI;
 
 public class Lab3 {
     public static void main(String[] args) {
-        /*StringBuffer s = new StringBuffer("ABAB");
+        StringBuffer s = new StringBuffer("ABAB");
         StringBuffer s2 = s;
         System.out.println(s == s2);
         s = s.append("ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABAB");
-        System.out.println(s == s2);*/
+        System.out.println(s == s2);
 
         /*StringBuffer s = new StringBuffer("ABAB");
         System.out.println(s);

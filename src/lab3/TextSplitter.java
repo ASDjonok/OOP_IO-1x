@@ -7,9 +7,9 @@ public class TextSplitter {
         String text = "Hello, world! I am program. How are you?";
         System.out.println(text);
 
-        final String[] sentences = text.split("(?<=([!.?]))");
+        final String[] sentences = text.split("(?<=([!.?]))\s");
         for (String sentence : sentences) {
-            System.out.println(sentence);
+            System.out.println(sentence/*.trim()*/);
         }
 //        System.out.println(Arrays.toString(splitedSentences));
 
