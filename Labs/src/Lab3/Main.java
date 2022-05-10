@@ -24,7 +24,8 @@ public class Main {
         System.out.println("Остання літера:");
         StringBuilder ll = new StringBuilder(scanner.next());
         if (fl.length() > 1 || ll.length() > 1) {
-            throw new IllegalArgumentException("More than 1 letter");
+            System.out.println("More than 1 letter");
+            return;
         }
 
         int from = 0, to;
@@ -36,7 +37,6 @@ public class Main {
                 from = i + 1;
             }
         }
-        System.out.println(sentences);
 
         StringBuilder max;
         for (String sentence : sentences) {

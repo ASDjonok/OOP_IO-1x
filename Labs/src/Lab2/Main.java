@@ -23,11 +23,13 @@ public class Main {
 
         System.out.println("Розмір матриці:");
         if (!scanner.hasNextInt()) {
-            throw new IllegalArgumentException("Throw me some numbers");
+            System.out.println("Throw me some numbers");
+            return;
         }
         final int N = scanner.nextInt();
         if (N < 0) {
-            throw new IllegalArgumentException("Throw me some NATURAL numbers");
+            System.out.println("Throw me some NATURAL numbers");
+            return;
         }
 
         System.out.println("Введіть матрицю А:");
