@@ -32,7 +32,7 @@ public class Lab3 {
         Write(fw);
     }
     public static void Write(String[] str) { // Метод написання String[]
-        System.out.println("Cлова в першому реченні заданого тексту, яких немає в жодному з наступних: ");
+        System.out.print("Cлова в першому реченні заданого тексту, яких немає в жодному з наступних: ");
         for (int i = 0; i < str.length; i++) {
             System.out.println(str[i]);
         }
