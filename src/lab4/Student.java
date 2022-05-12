@@ -1,5 +1,7 @@
 package lab4;
 
+import java.util.Objects;
+
 /**
  * Це мій найулюбленіший клас студента, який краще від усіх
  * інших аналогів класів студент. Ніхто в світі не напише класу краще ніж цей.
@@ -8,13 +10,57 @@ public class Student {
     /**
      * That's my name:)
      */
-    private String name = "Oleksii";
+    private /*static*/ String name/* = "Oleksii"*/;
+
+    /*public static void main(String[] args) {
+        Student student = new Student();
+        student.name = "B";
+        System.out.println(student.name);
+    }*/
+
+    public Student(String name) {
+//        this.name = name;
+        setName(name);
+    }
+
+    Student() {
+        name = "Oleksii";
+    }
 
     public String getName() {
         return name;
     }
 
-    /*public void setName(String name) {
+    public void setName(String name, String password) {
+        if ("1111".equals(password)) {
+            setName(name);
+        } else {
+            System.out.println("Access denied!");
+        }
+    }
+
+    private void setName(String name) {
         this.name = name;
-    }*/
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return /*this.*/name.equals(((Student)o).name);
+        /*if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(name, student.name);*/
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
