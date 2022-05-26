@@ -23,7 +23,8 @@ public class Main {
         System.out.println(student == student2);
         System.out.println(student.equals(student2));
         System.out.println(student);
-
+        System.out.println(student.equals("A"));
+        System.out.println(student.equals(null));
 //        ...
 
         /*student.name = "Svitlana";

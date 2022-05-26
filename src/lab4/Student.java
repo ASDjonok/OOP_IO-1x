@@ -18,6 +18,10 @@ public class Student {
         System.out.println(student.name);
     }*/
 
+    /**
+     *
+     * @param name ім'я (можна кирилицею адо латиницею)
+     */
     public Student(String name) {
 //        this.name = name;
         setName(name);
@@ -27,6 +31,10 @@ public class Student {
         name = "Oleksii";
     }
 
+    /**
+     * Повертає ім'я студента
+     * @return ім'я
+     */
     public String getName() {
         return name;
     }
@@ -52,6 +60,7 @@ public class Student {
 
     @Override
     public boolean equals(Object o) {
+        if (o == null || this.getClass() != o.getClass()) return false;
         return /*this.*/name.equals(((Student)o).name);
         /*if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
