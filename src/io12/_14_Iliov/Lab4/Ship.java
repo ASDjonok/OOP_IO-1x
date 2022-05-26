@@ -1,4 +1,4 @@
-package com.company;
+package io12._14_Iliov.Lab4;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.company;
+package io12._14_Iliov.Lab3;
 
 import java.util.ArrayList;
 import java.util.Scanner;

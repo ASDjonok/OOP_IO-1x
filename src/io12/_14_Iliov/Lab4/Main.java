@@ -1,4 +1,4 @@
-package com.company;
+package io12._14_Iliov.Lab4;
 
 import java.util.Scanner;
 //Визначити клас морський човен, який складається як мінімум з 5-и полів.

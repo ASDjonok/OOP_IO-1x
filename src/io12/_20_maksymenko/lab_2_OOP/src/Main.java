@@ -1,3 +1,5 @@
+package io12._20_maksymenko.lab_2_OOP.src;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("C5 is " + 1220 % 5 + " so C5 is  C=axB, a - const ");
