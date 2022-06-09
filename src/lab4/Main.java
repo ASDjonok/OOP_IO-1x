@@ -33,7 +33,13 @@ public class Main {
 //        ...
 
         Student[] students = {student, student2};
+        System.out.println(Arrays.toString(students));
+        System.out.println(students);
         Arrays.sort(students);
+        System.out.println(Arrays.toString(students));
+        System.out.println(student.compareTo(student2));
+        System.out.println((int)'A');
+        System.out.println((int)'O');
         /*student.name = "Svitlana";
         System.out.println(student.name);*/
         /*System.out.println(student);

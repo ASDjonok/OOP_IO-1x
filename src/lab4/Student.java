@@ -78,6 +78,6 @@ public class Student implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return name.compareTo(((Student)o).name);
+        return /*this.*/name.compareTo(((Student)o).name);
     }
 }
