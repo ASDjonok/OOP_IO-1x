@@ -1,6 +1,7 @@
 package lab4;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,14 +33,27 @@ public class Main {
         System.out.println(student2.hashCode());
 //        ...
 
-        Student[] students = {student, student2};
-        System.out.println(Arrays.toString(students));
-        System.out.println(students);
-        Arrays.sort(students);
-        System.out.println(Arrays.toString(students));
-        System.out.println(student.compareTo(student2));
+        Student[] students = {student2, student};
+        student.setLevel(Level.LOW);
+        student2.setLevel(Level.HIGH);
+        System.out.println("Not sorted:");
+//        System.out.println(Arrays.deepToString(students));
+        printArray(students);
+//        System.out.println(students);
+//        todo sort by level (Enum)
+        Arrays.sort(students, Collections.reverseOrder());
+        System.out.println("Sorted:");
+//        System.out.println(Arrays.toString(students));
+        printArray(students);
+
+        Student student3 = new Student("Oleksii III", "Aleshchenko I");
+
+        // ...
+
+        student3.setFaculty("IPSA", "II-11");
+        /*System.out.println(student.compareTo(student2));
         System.out.println((int)'A');
-        System.out.println((int)'O');
+        System.out.println((int)'O');*/
         /*student.name = "Svitlana";
         System.out.println(student.name);*/
         /*System.out.println(student);
@@ -47,5 +61,11 @@ public class Main {
         /*for (;*//*false*//*;) {
             System.out.println("AAAA!!!");
         }*/
+    }
+
+    private static void printArray(Student[] students) {
+        for (Student student : students) {
+            System.out.println(student);
+        }
     }
 }

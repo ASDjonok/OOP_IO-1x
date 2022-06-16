@@ -10,8 +10,30 @@ public class Student implements Comparable {
     /**
      * That's my name:)
      */
-    private /*static*/ String name/* = "Oleksii"*/;
+    private /*static*/ String name /*= "Oleksii"*/;
+    private String surname;
+    private int age;
+    private Level level;
+    private String faculty;
+    private String group;
 
+    public Student(String name, String surname, int age, Level level, String faculty, String group) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.level = level;
+        this.faculty = faculty;
+        this.group = group;
+    }
+
+    public void setFaculty(String faculty, String newGroup) {
+        this.faculty = faculty;
+        group = newGroup;
+    }
+
+    /*{
+        surname = "Aleshchenko";
+    }*/
     /*public static void main(String[] args) {
         Student student = new Student();
         student.name = "B";
@@ -24,11 +46,24 @@ public class Student implements Comparable {
      */
     public Student(String name) {
 //        this.name = name;
-        setName(name);
+//        setName(name);
+        this(name, "Aleshchenko");
     }
 
-    Student() {
-        name = "Oleksii";
+    /**
+     *
+     * @param name ім'я (можна кирилицею адо латиницею)
+     * @param name прізвище (можна кирилицею адо латиницею)
+     */
+    public Student(String name, String surname) {
+//        this.surname = surname;
+        setName(name);
+        setSurname(surname);
+    }
+
+    public Student() {
+//        name = "Oleksii";
+        this("Oleksii");
     }
 
     /**
@@ -51,10 +86,19 @@ public class Student implements Comparable {
         this.name = name;
     }
 
+    private void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", level=" + level +
+                ", faculty='" + faculty + '\'' +
+                ", group='" + group + '\'' +
                 '}';
     }
 
@@ -78,6 +122,12 @@ public class Student implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return /*this.*/name.compareTo(((Student)o).name);
+        //        todo sort by level (Enum)
+//        return /*this.*/name.compareTo(((Student)o).name);
+        return level.compareTo(((Student)o).level);
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
     }
 }
