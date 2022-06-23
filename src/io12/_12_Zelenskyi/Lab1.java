@@ -1,5 +1,7 @@
+package io12._12_Zelenskyi;
+
 import java.util.Scanner;
-public class Main {
+public class Lab1 {
     public static void main(String[] args) {
         int GradeBookNumber = 1213;
         System.out.println("Номер залікової книжки" + GradeBookNumber);

@@ -6,7 +6,7 @@ import java.util.Objects;
  * Це мій найулюбленіший клас студента, який краще від усіх
  * інших аналогів класів студент. Ніхто в світі не напише класу краще ніж цей.
  */
-public class Student implements Comparable {
+public class Student implements Comparable<Student> {
     /**
      * That's my name:)
      */
@@ -17,11 +17,11 @@ public class Student implements Comparable {
     private String faculty;
     private String group;
 
-    private static boolean isSortedByName = true;
+    /*private static boolean isSortedByName = true;
 
     public static void setIsSortedByName(boolean isSortedByName) {
         Student.isSortedByName = isSortedByName;
-    }
+    }*/
 
     public Student(String name, String surname, int age, Level level, String faculty, String group) {
         this.name = name;
@@ -127,9 +127,14 @@ public class Student implements Comparable {
     }
 
 //    @Override
-    public int compareTo(Object o, boolean b) {
+//    public int compareTo(Object o, boolean b) {
 //        return /*this.*/name.compareTo(((Student)o).name);
-        return level.compareTo(((Student)o).level);
+//        return level.compareTo(((Student)o).level);
+//    }
+
+
+    public Level getLevel() {
+        return level;
     }
 
     public void setLevel(Level level) {
@@ -137,9 +142,13 @@ public class Student implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return isSortedByName
+    public int compareTo(Student/*Object*/ o) {
+        /*return isSortedByName
                 ? name.compareTo(((Student)o).name)
-                : level.compareTo(((Student)o).level);
+                : level.compareTo(((Student)o).level);*/
+        /*final int nameCompareResult = name.compareTo(((Student) o).name);
+        return nameCompareResult != 0 ? nameCompareResult : -level.compareTo(((Student)o).level);*/
+        final int nameCompareResult = name.compareTo(o.name);
+        return nameCompareResult != 0 ? nameCompareResult : -level.compareTo(o.level);
     }
 }

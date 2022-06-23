@@ -33,22 +33,29 @@ public class Main {
         System.out.println(student2.hashCode());
 //        ...
 
-        Student[] students = {student2, student};
+        Student student3 = new Student("Oleksii II", "Aleshchenko", 17, Level.LOW, "", "");
+
+        Student[] students = {student3, student2, student};
         student2.setLevel(Level.LOW);
         student.setLevel(Level.HIGH);
         System.out.println("Not sorted:");
 //        System.out.println(Arrays.deepToString(students));
         printArray(students);
 //        System.out.println(students);
-        Arrays.sort(students, Collections.reverseOrder());
-        System.out.println("Sorted by name in reverse order:");
+//        Arrays.sort(students/*, Collections.reverseOrder()*/);
+        Arrays.sort(students, new NameComparator());
+        System.out.println("Sorted by name:");
 //        System.out.println(Arrays.toString(students));
         printArray(students);
 
-        Student.setIsSortedByName(false);
+        Arrays.sort(students, new LevelComparator().reversed());
+        System.out.println("Sorted by level reversed:");
+        printArray(students);
+//        System.out.println(student.compareTo("123"));
+        /*Student.setIsSortedByName(false);
         Arrays.sort(students);
         System.out.println("Sorted by level in direct order:");
-        printArray(students);
+        printArray(students);*/
 
 //        Student student3 = new Student("Oleksii III", "Aleshchenko I");
 
