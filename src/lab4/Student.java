@@ -17,6 +17,12 @@ public class Student implements Comparable {
     private String faculty;
     private String group;
 
+    private static boolean isSortedByName = true;
+
+    public static void setIsSortedByName(boolean isSortedByName) {
+        Student.isSortedByName = isSortedByName;
+    }
+
     public Student(String name, String surname, int age, Level level, String faculty, String group) {
         this.name = name;
         this.surname = surname;
@@ -120,14 +126,20 @@ public class Student implements Comparable {
         return Objects.hash(name);
     }
 
-    @Override
-    public int compareTo(Object o) {
-        //        todo sort by level (Enum)
+//    @Override
+    public int compareTo(Object o, boolean b) {
 //        return /*this.*/name.compareTo(((Student)o).name);
         return level.compareTo(((Student)o).level);
     }
 
     public void setLevel(Level level) {
         this.level = level;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return isSortedByName
+                ? name.compareTo(((Student)o).name)
+                : level.compareTo(((Student)o).level);
     }
 }

@@ -34,23 +34,27 @@ public class Main {
 //        ...
 
         Student[] students = {student2, student};
-        student.setLevel(Level.LOW);
-        student2.setLevel(Level.HIGH);
+        student2.setLevel(Level.LOW);
+        student.setLevel(Level.HIGH);
         System.out.println("Not sorted:");
 //        System.out.println(Arrays.deepToString(students));
         printArray(students);
 //        System.out.println(students);
-//        todo sort by level (Enum)
         Arrays.sort(students, Collections.reverseOrder());
-        System.out.println("Sorted:");
+        System.out.println("Sorted by name in reverse order:");
 //        System.out.println(Arrays.toString(students));
         printArray(students);
 
-        Student student3 = new Student("Oleksii III", "Aleshchenko I");
+        Student.setIsSortedByName(false);
+        Arrays.sort(students);
+        System.out.println("Sorted by level in direct order:");
+        printArray(students);
+
+//        Student student3 = new Student("Oleksii III", "Aleshchenko I");
 
         // ...
 
-        student3.setFaculty("IPSA", "II-11");
+//        student3.setFaculty("IPSA", "II-11");
         /*System.out.println(student.compareTo(student2));
         System.out.println((int)'A');
         System.out.println((int)'O');*/
