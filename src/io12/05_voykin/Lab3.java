@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 /*
  * C3 = 2; type of String variables: String
- * C13 = 15; operation to perform:
- * В заданому тексті замінити слова заданої довжини визначеним рядком.
- */
+        * C13 = 15; operation to perform:
+        * В заданому тексті замінити слова заданої довжини визначеним рядком.
+        */
 
 /**
  * Lab3 class contains methods required in lab 3 of OOP course
