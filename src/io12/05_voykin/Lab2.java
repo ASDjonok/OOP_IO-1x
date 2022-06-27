@@ -1,5 +1,3 @@
-package io12._05_voykin;
-
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Random;

@@ -5,7 +5,6 @@
  * C5 operator *: 1205 % 5 = 0
  * C7 type short: 1205 % 7 = 1
  */
-package io12._05_voykin;
 
 public class Lab1 {
     public static void main(String[] argv) {
