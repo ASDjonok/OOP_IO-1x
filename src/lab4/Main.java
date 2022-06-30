@@ -34,11 +34,11 @@ public class Main {
         System.out.println(student2.hashCode());
 //        ...
 
-        Student student3 = new Student("Oleksii II", "Aleshchenko", 17, Level.LOW, "", "");
+        Student student3 = new Student("Oleksii II", "Aleshchenko", 17, Level.HIGH, "", "");
 
         Student[] students = {student3, student2, student};
         student2.setLevel(Level.LOW);
-        student.setLevel(Level.HIGH);
+        student.setLevel(Level.LOW);
         System.out.println("Not sorted:");
 //        System.out.println(Arrays.deepToString(students));
         printArray(students);
@@ -51,14 +51,25 @@ public class Main {
                 return o1.getLevel().compareTo(o2.getLevel());
             }
         });*/
-        Arrays.sort(students, (o1, o2) -> o1.getLevel().compareTo(o2.getLevel()));
-        System.out.println("Sorted by name:");
+//        Arrays.sort(students, (o1, o2) -> o1.getLevel().compareTo(o2.getLevel()));
+//        Arrays.sort(students, Comparator.comparing(Student::getLevel));
+//        Arrays.sort(students, Comparator.comparing(Student::getLevel).reversed());
+        Arrays.sort(students,
+                Comparator
+                    .comparing(Student::getName)
+                    .thenComparing(Comparator.comparing(Student::getLevel).reversed())
+        );
+        System.out.println("Sorted:");
+        printArray(students);
+
+//        todo thenComparing
+        /*System.out.println("Sorted by name:");
 //        System.out.println(Arrays.toString(students));
         printArray(students);
 
         Arrays.sort(students, new LevelComparator().reversed());
         System.out.println("Sorted by level reversed:");
-        printArray(students);
+        printArray(students);*/
 //        System.out.println(student.compareTo("123"));
         /*Student.setIsSortedByName(false);
         Arrays.sort(students);
