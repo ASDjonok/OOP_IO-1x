@@ -62,7 +62,6 @@ public class Main {
         System.out.println("Sorted:");
         printArray(students);
 
-//        todo thenComparing
         /*System.out.println("Sorted by name:");
 //        System.out.println(Arrays.toString(students));
         printArray(students);
