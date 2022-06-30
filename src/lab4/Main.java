@@ -45,12 +45,13 @@ public class Main {
 //        System.out.println(students);
 //        Arrays.sort(students/*, Collections.reverseOrder()*/);
 //        Arrays.sort(students, new NameComparator());
-        Arrays.sort(students, new Comparator<Student>() {
+        /*Arrays.sort(students, new Comparator<Student>() {
             @Override
             public int compare(Student o1, Student o2) {
                 return o1.getLevel().compareTo(o2.getLevel());
             }
-        });
+        });*/
+        Arrays.sort(students, (o1, o2) -> o1.getLevel().compareTo(o2.getLevel()));
         System.out.println("Sorted by name:");
 //        System.out.println(Arrays.toString(students));
         printArray(students);
