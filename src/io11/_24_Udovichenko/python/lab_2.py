@@ -14,7 +14,8 @@ class Task:
         self.a, self.b = a, b
 
     def solve(self) -> float:
-        C = (map(sum, zip(*c)) for c in zip(self.a, self.b))
+        C = [list(map(sum, zip(*c))) for c in zip(self.a, self.b)]
+        print(C, sep=" ")
         return sum(fn(x) for x, fn in zip(C, cycle([max, min])))
 
 

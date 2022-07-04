@@ -9,7 +9,8 @@ class Task:
 
     def solve(self) -> None:
         for s in sorted(
-            filter(lambda a: len(set(a.lower())) == len(a), self.words),
+            # filter(lambda a: len(set(a.lower())) == len(a), self.words),
+            set(self.words),
             key=lambda c: c[0].lower(),
             reverse=False,
         ):
