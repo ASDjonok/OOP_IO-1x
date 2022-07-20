@@ -11,7 +11,7 @@ public class Lab1 {
         final int C5 = 1329 % 5;/*4 => Операція O2 (-)*/
         final int C7 = 1329 % 7;/*6 => Тип індексів i та j (double)*/
         final int C = 1329 % 3; /*0*/
-        final int a;
+        int a;
         final int n;
         final int b;
         final int m;
@@ -29,7 +29,7 @@ public class Lab1 {
                 }
                 break;
             } else {
-                System.out.print("Please, type an integer");
+                System.out.print("Please, type an integer: ");
                 scanner.next();
             }
         }
@@ -50,7 +50,7 @@ public class Lab1 {
             System.out.println("Result: " + res);
         } else {
             for (i = a; i <= n; i++) {
-                for (j = b; b <= m; b++) {
+                for (j = b; j <= m; j++) {
                     res += (i - j) / (i - C);
                 }
             }
