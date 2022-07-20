@@ -11,17 +11,28 @@ public class Lab1 {
         final int C5 = 1329 % 5;/*4 => Операція O2 (-)*/
         final int C7 = 1329 % 7;/*6 => Тип індексів i та j (double)*/
         final int C = 1329 % 3; /*0*/
-        int a;
-        int n;
-        int b;
-        int m;
+        final int a;
+        final int n;
+        final int b;
+        final int m;
         double i;
         double j;
         double res = 0;
 
         System.out.print("Type a: ");
-        checkInt(scanner);
-        a = scanner.nextInt();
+        while (true){
+            if (scanner.hasNextInt()){
+                a = scanner.nextInt();
+                if (a == 0){
+                    System.out.print("Please, type a != 0: ");
+                    continue;
+                }
+                break;
+            } else {
+                System.out.print("Please, type an integer");
+                scanner.next();
+            }
+        }
 
         System.out.print("Type n: ");
         checkInt(scanner);
@@ -35,9 +46,7 @@ public class Lab1 {
         checkInt(scanner);
         m = scanner.nextInt();
 
-        if (a == 0) {
-            System.out.println("Error! Division by zero! Try again");
-        } else if ((n < a) || (m < b)) {
+        if ((n < a) || (m < b)) {
             System.out.println("Result: " + res);
         } else {
             for (i = a; i <= n; i++) {
@@ -56,4 +65,3 @@ public class Lab1 {
         }
     }
 }
-
