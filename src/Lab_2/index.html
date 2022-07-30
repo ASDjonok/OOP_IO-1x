@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2>ООП #2</h2>
+    <p>Enter scale of the A matrix:<input type="number" id="matrix_a_scale"></p>
+    <p>Enter scale of the B matrix:<input type="number" id="matrix_b_scale"></p>
+    <button type="button" id="generate_button">Generate</button>
+
+    <p>Matrix A:</p>
+    <table id="matrix_a_table" style="font-family: 'Inconsolata', monospace;"></table>
+    <p>Matrix B:</p>
+    <table id="matrix_b_table" style="font-family: 'Inconsolata', monospace;"></table>
+    <p>Matrix C (C=A+B):</p>
+    <table id="result_table" style="font-family: 'Inconsolata', monospace;"></table>
+
+    <p>Знайти середнє значення елементів кожного стовпчика матриця <br> Result:</p>
+    <p id="avarage_column_result" style="font-family: 'Inconsolata', monospace;"></p>
+
+    <script src="index.js"></script>
+    <script src="Task.js"></script>
+</body>
+</html>
